@@ -1,10 +1,10 @@
-const { FETCH_MOVIES, FETCH_SUCCEEDED, FETCH_FAILED, ADD_MOVIE } = require("../action/actionTypes");
+import { FETCH_SUCCEEDED, FETCH_FAILED, ADD_MOVIE } from '../action/actionTypes';
 
 
 const movieReducer = (movie = [], action)=>{
     switch (action.type) {
         case FETCH_SUCCEEDED:
-            return action.receivedMovie;
+            return action.receiveMovie;
         case FETCH_FAILED:
             return [];
         case ADD_MOVIE:

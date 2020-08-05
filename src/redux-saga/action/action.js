@@ -15,10 +15,10 @@ export const addMoviesAction = (newMovie) => {
     }
 }
 
-export const fetchSuccessAction = (receivedMovie) => {
+export const fetchSuccessAction = (receiveMovie) => {
     return {
         type: FETCH_SUCCEEDED,
-        receivedMovie
+        receiveMovie
     }
 }
 

@@ -8,7 +8,8 @@ function* getMovie(){
             'content-Type': 'application/json'
         }, 
         body: ''
-    })
+    });
+    console.log(reponse)
     const movies = yield reponse.status === 200 ? JSON.parse(reponse): []
     return movies;
 }

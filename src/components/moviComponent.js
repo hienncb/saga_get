@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Text, View, TextInput, TouchableOpacity, FlatList } from 'react-native'
-import connect from 'react-redux'
+import { connect } from 'react-redux'
 import { fetchMoviesAction, addMoviesAction } from '../redux-saga/action/action'
 
 
@@ -29,7 +29,7 @@ class moviComponent extends Component{
                 <View style={{height: 70, flexDirection: 'row',}}>
                     <TouchableOpacity style={{padding: 10, margin: 10, width: 150, height: 45, borderRadius: 10, backgroundColor:'blue'}}
                         onPress={()=>{
-                            this.props.onFetchMovie('asc');
+                            this.props.onFetchMovie();
                         }}>
                             <Text>fletch movies</Text>
                     </TouchableOpacity>
