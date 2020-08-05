@@ -4,7 +4,7 @@ import { FETCH_SUCCEEDED, FETCH_FAILED, FETCH_MOVIES } from '../action/actionTyp
 
 function* fetchMovie(){
     try {
-        const receiMovies = yield Api.getMovie();
+        const receiveMovie = yield Api.getMovie();
         yield  put({type: FETCH_SUCCEEDED, receiveMovie: receiveMovie})
     } catch (error) {
         yield put({type: FETCH_FAILED, error})
